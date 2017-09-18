@@ -12,6 +12,11 @@ In order to follow along with the hands on portion of the workshop students shou
 
   * Internet access
   * An account on Github.com and a basic understanding of how to use Github and Git
+  * A personal access token for your Github account (https://github.com/settings/tokens) with the following permissions:
+    - repo: all
+    - admin:repo_hook: all
+    - admin:org_hook
+    - user: all
   * Your favorite text editor (optional)
   * Access to a Jenkins server (for 9/20/17 use: http://ec2-34-201-120-234.compute-1.amazonaws.com:8080/)
 
