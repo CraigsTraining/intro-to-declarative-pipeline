@@ -66,10 +66,21 @@ We will also add the following ```echo``` steps within the ```steps``` of the Sa
 
 **Note**: After executing the build look at the console output and make note of the fact that the credential user name and password are masked when output via the echo command.
 
-
 # Exercise 1.4
 
+In **Exercise 1.4** we will alter our pipeline to accept external input in the form of a Parameter.
 
+At the top of your pipeline insert the following block of code between the ```environment``` and ```stages``` blocks:
+
+```
+   parameters {
+      string(name: 'Name', defaultValue: 'whoever you are', 
+	     description: 'Who should I say hi to?')
+   }
+```
+Then update the ```echo "Hello ${MY_NAME}!'``` line to read ```echo "Hello ${params.Name}!" and run your build again to view the results.
+
+**Note**: Jenkins UI won't update properly when you save the pipeline to show the ```Build with parameters``` option so you need to run a build, view the results, and then return to the project to see the updated option.
 
 # Exercise 1.5
 
