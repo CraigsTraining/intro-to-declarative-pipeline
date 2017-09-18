@@ -84,3 +84,23 @@ Then update the ```echo "Hello ${MY_NAME}!'``` line to read ```echo "Hello ${par
 
 # Exercise 1.5
 
+For **Exercise 1.5** we are going to add a new stage after the **Say Hello** stage that will demonstrate how to ask interactively for user input.
+
+Insert the following ``stage``` block into your pipeline:
+
+```
+      stage('Deploy') {
+         steps {
+            input 'Should I deploy?'
+         }
+      }
+```
+
+**Note**: To keep Jenkins from waiting indefinitely for a user response you should wrap you input steps in a ```timeout``` like shown below:
+
+```
+            timeout(time: 1, unit: 'MINUTES') {
+               input 'Should I deploy?'
+            }
+```
+
