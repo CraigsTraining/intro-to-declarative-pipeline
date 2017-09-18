@@ -6,11 +6,12 @@ This is repository contains the instructions and learning materials associated w
   * What tools are available for creating pipelines?
   * ...
 
-# Prerequisites
+# Training Prerequisites
 
 In order to follow along with the hands on portion of the workshop students should have the following resources available to them:
 
-  * An account on Github.com and a basic understanding of how to use Github
-  *
-
+  * Internet access
+  * An account on Github.com and a basic understanding of how to use Github and Git
+  * Your favorite text editor (optional)
+  * Access to a Jenkins server (for 9/20/17 use: http://ec2-34-201-120-234.compute-1.amazonaws.com:8080/)
 
