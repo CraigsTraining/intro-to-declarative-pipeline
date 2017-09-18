@@ -39,3 +39,37 @@ In **Exercise 1.2** we will update the pipeline we created in 1.1 to execute in 
    }
 ```
 
+# Exercise 1.3
+
+For **Exercise 1.3** we are going to update our **SimplePipeline** job to demonstrate how to use environmental variables.
+
+At the top of the pipeline insert the following code between the ```agent``` and ```stages``` blocks:  
+
+```
+   environment {
+      MY_NAME = 'Mary'
+   }
+```
+
+Then update the ```echo 'Hello World!'``` line to read ```echo "Hello ${MY_NAME}!" and run your build again to view the results.
+
+We can also use environmental variables to import credentials. To demonstrate we will add the following line to our ```environment``` block:
+
+```TEST_USER = credentials('test-user')```
+
+We will also add the following ```echo``` steps within the ```steps``` of the Say Hello ```stage```:
+
+```
+            echo "${TEST_USER_USR}"
+            echo "${TEST_USER_PSW}"
+```
+
+**Note**: After executing the build look at the console output and make note of the fact that the credential user name and password are masked when output via the echo command.
+
+
+# Exercise 1.4
+
+
+
+# Exercise 1.5
+
