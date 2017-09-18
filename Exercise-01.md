@@ -1,6 +1,6 @@
-# Exercise 1
+# Exercise 1.1
 
-In **Exercise 1** we will create a simple declarative pipeline directly within the Jenkins interface.
+In **Exercise 1.1** we will create a simple declarative pipeline directly within the Jenkins interface.
 
 To create the new pipeline:
 
@@ -26,3 +26,16 @@ pipeline {
 }
 ```
 Click on **Save** and then click on **Build Now** to run your pipeline.
+
+# Exercise 1.2
+
+In **Exercise 1.2** we will update the pipeline we created in 1.1 to execute in a docker container. To update the pipeline:
+
+1. Click on configure and update the ```agent``` portion of the pipeline to read:
+
+```
+   agent {
+      docker { image 'maven:3.3-jdk-8' }
+   }
+```
+
