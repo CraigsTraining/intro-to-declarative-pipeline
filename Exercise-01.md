@@ -78,7 +78,7 @@ At the top of your pipeline insert the following block of code between the ```en
 	     description: 'Who should I say hi to?')
    }
 ```
-Then update the ```echo "Hello ${MY_NAME}!'``` line to read ```echo "Hello ${params.Name}!" and run your build again to view the results.
+Then update the ```echo "Hello ${MY_NAME}!'``` line to read ```echo "Hello ${params.Name}!"``` and run your build again to view the results.
 
 **Note**: Jenkins UI won't update properly when you save the pipeline to show the ```Build with parameters``` option so you need to run a build, view the results, and then return to the project to see the updated option.
 
