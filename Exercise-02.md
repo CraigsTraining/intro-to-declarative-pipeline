@@ -18,7 +18,7 @@ Now lets fork the repo into the new organization:
 
 In this exercise we are going to create a Github Organization project from our newly forked repository.
 
-**Note**: You need to have a Github personal access token before proceeding.
+**Note**: You need to have a Github personal access token (https://github.com/CraigsTraining/intro-to-declarative-pipeline/blob/master/Github-Personal-Access-Token.md) before proceeding.
 
 First let's add your Github credentials to the Jenkins' Credentials manager:
 
@@ -46,6 +46,20 @@ Now let's create the Github Organization project:
 
 Once you click on save Jenkins will search your organization for any projects with Jenkinsfiles in them, import those projects as Multibranch projects, and begin building each branch with a Jenkinsfile in it.
 
+When the project was created it also should have created webhooks in Github. Verify that the webhooks were created in Github by checking **Webhooks** within your organization's Github **Settings**.
 
+# Exercise 2.3
+
+
+```
+      stage('Development Tests') {
+         when {
+            branch 'development'
+         }
+         steps {
+            echo "Run the development tests!"
+         }
+      }
+```
 
 

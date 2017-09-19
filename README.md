@@ -12,7 +12,7 @@ In order to follow along with the hands on portion of the workshop students shou
 
   * Internet access
   * An account on Github.com and a basic understanding of how to use Github and Git
-  * A personal access token for your Github account (https://github.com/settings/tokens) with the following permissions:
+  * A personal access token for your Github account (https://github.com/CraigsTraining/intro-to-declarative-pipeline/blob/master/Github-Personal-Access-Token.md) with the following permissions:
     - repo: all
     - admin:repo_hook: all
     - admin:org_hook
