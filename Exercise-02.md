@@ -27,10 +27,10 @@ First let's add your Github credentials to the Jenkins' Credentials manager:
 3. Click on **Global Credentials (Unrestricted)**
 4. Click on **Add Credentials**
 5. Fill out the form (**Username with password**)
-  - Username: The Github organization name
-  - Password: Your Github personal access token
-  - ID: Create an ID for your credentials (something like **yourorg-id**)
-  - Description: Can be left blank if you want
+  - **Username**: The Github organization name
+  - **Password**: Your Github personal access token
+  - **ID**: Create an ID for your credentials (something like **yourorg-id**)
+  - **Description**: Can be left blank if you want
 6. Click on **OK**
 
 Now let's create the Github Organization project:
