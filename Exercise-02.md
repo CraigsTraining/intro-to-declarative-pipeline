@@ -50,6 +50,12 @@ When the project was created it also should have created webhooks in Github. Ver
 
 # Exercise 2.3
 
+In this exercise we are going to edit the Jenkinsfile file in the **development** branch of our project to add a branch specific stage.
+
+1. Within your **sample-rest-server** project select the **development** branch from the **Branch** drop down menu
+2. Click on the **Jenkinsfile** in the file list
+3. Click on the **Edit this file** button (pencil)
+4. Insert the following stage after the existing **build** stage:
 
 ```
       stage('Development Tests') {
@@ -61,5 +67,48 @@ When the project was created it also should have created webhooks in Github. Ver
          }
       }
 ```
+
+5. Fill out the commit information, select 'Commit directly to the development branch.', and click on **Commit Changes**
+
+Notice how after you commit your changes the Github web hooks trigger a build of the development branch in Jenkins.
+
+# Exercise 2.4
+
+In this exercise we are going to edit the development branch's Jenkinsfile again but make our commit against a feature branch and user a pull request to merge the edits into our development branch.
+
+1. Click on the **Edit this file** button (pencil)
+2. Insert the following stage after the existing **build** stage:
+
+```
+      stage('Masters Tests') {
+         when {
+            branch 'master'
+         }
+         steps {
+            echo "Run the master tests!"
+         }
+      }
+```
+
+3. Fill out the commit information, select 'Create a new branch for this commit and start a pull request.' and click on **Propose file change**
+4. Flip back to your Jenkins job and notice that the new feature branch appears in your projects
+5. Return back to the Github **Open a pull request** page
+6. Click on the **Create pull request** button
+7. Go to your Jenkins job and notice that that the PR has been added to the Pull Requests tab
+8. In Github click on **Merge pull request** and then **Confirm** to close the PR and merge the results into the development branch
+9. Optionally you can also delete the feature branch you created
+
+Finally, we should merge our work into our master branch to verify that our changes work there:
+
+1. Return back to your repository's main page where you will be on the master branch by default
+2. Click on **New pull request**
+3. Select your base fork (not the project we forked from)
+4. Compare **master** to **development**
+5. Click **View pull request**
+6. Click **Merge pull request**
+7. Click **Confirm merge**
+
+Notice how after you merge your changes into master the Github web hooks trigger a build of the master branch in Jenkins.
+
 
 
