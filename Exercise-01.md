@@ -96,11 +96,34 @@ Insert the following ``stage``` block into your pipeline:
       }
 ```
 
-**Note**: To keep Jenkins from waiting indefinitely for a user response you should wrap you input steps in a ```timeout``` like shown below:
+**Note**: To keep Jenkins from waiting indefinitely for a user response your should wrap you input steps in a ```timeout``` like shown below:
 
 ```
             timeout(time: 1, unit: 'MINUTES') {
                input 'Should I deploy?'
             }
 ```
+
+# Exercise 1.6
+
+What happens if your input step times out? **Post Actions** are designed to handle a variety of conditions (not only failures) that could occur outside the standard pipeline flow.
+
+In this example we will add a Post Action to our **Deploy** stage to handle a time out (aborted run). Modify your **Deploy** stage to look like:
+
+```
+      stage('Deploy') {
+         steps {
+            timeout(time: 1, unit: 'MINUTES') {
+               input 'Should I deploy?'
+            }
+         }
+         post {
+            aborted {
+               echo 'Why didn\'t you push my button?'
+            }
+         }
+      }
+```
+
+On the next build wait for the input time and you will see the following line in your console output: ```Why didn't you push my button?```.
 
