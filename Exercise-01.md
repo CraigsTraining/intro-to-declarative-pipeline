@@ -127,3 +127,23 @@ In this example we will add a Post Action to our **Deploy** stage to handle a ti
 
 On the next build wait for the input time and you will see the following line in your console output: ```Why didn't you push my button?```.
 
+# Exercise 1.7
+
+In **Exercise 1.7** we are going to add a third stage to our pipeline that uses a **Shared Library** to import functionality that allows us to say hi.
+
+More information on using Shared Libraries is available here: https://jenkins.io/doc/book/pipeline/shared-libraries/
+
+Add the following line at the top of your pipeline **above** the ```pipeline``` line:
+
+```library 'SharedLibs'```
+
+Then add the following stage after the **Deploy** stage:
+
+```
+      stage('Shared Lib') {
+         steps {
+             helloWorld("Craig")
+         }
+      }
+```
+The ```helloWorld``` function we are calling can be seen at: https://github.com/CraigsTraining/shared-libraries/blob/master/vars/helloWorld.groovy
