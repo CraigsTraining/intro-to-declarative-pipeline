@@ -27,6 +27,6 @@ In order to follow along with the hands on portion of the workshop students shou
     - admin:org_hook
     - user: all
   * Your favorite text editor (optional)
-  * Access to a Jenkins server (for 9/20/17 use: http://ec2-34-201-120-234.compute-1.amazonaws.com:8080/)
+  * Access to a Jenkins server
 
 
