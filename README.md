@@ -38,7 +38,6 @@ For instructions on setting up a Jenkins environment (Jenkins, CloudBees Jenkins
 
 # Revision History
 
- * **[1.2]** - 
  * **[1.1](https://github.com/PipelineHandsOn/intro-to-declarative-pipeline/releases/tag/1.1)** - Initial release of workshop materials.
 
 # License
