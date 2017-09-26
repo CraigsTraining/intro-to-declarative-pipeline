@@ -149,4 +149,53 @@ Then add the following stage after the **Deploy** stage:
 
 The ```helloWorld``` function we are calling can be seen at: https://github.com/CraigsTraining/shared-libraries/blob/master/vars/helloWorld.groovy
 
+# Exercise 1.8
 
+In this exercise we are going to add a fourth stage to our or pipeline that runs two steps in parallel on two different docker based agents (one running Java 7 and one running Java 8). The following code also includes ```sleep``` steps to demonstrate what happens when parallel steps complete execution at different times:
+
+
+```
+		stage('Testing') {
+            parallel {
+                stage('Java 7') {
+                    agent { docker 'openjdk:7-jdk-alpine' }
+                    steps {
+                        sh 'java -version'
+                        sleep time: 1, unit: 'MINUTES'
+                    }
+                }
+                stage('Java 8') {
+                    agent { docker 'openjdk:8-jdk-alpine' }
+                    steps {
+                        sh 'java -version'
+                        sleep time: 2, unit: 'MINUTES'
+                    }
+                }
+            }
+        }
+```
+
+# Exercise 1.9
+
+Finally we will use the Blue Ocean Pipeline Editor to create a simple declarative pipeline using the following steps:
+
+1. Click on the **Open Blue Ocean** button in the left side navigation bar
+2. Click on the **New Pipeline** button
+3. Click on one of the options in the **Where do you store your code?** section (Github for this course)
+4. Enter your **Github token**
+5. Select the **Organization** in which the repository that you want to create the Jenkinsfile in exists
+6. Select **New Pipeline**
+7. Choose the **Repository**
+8. Click on **Create Pipeline**
+
+Once the pipeline has created Blue Ocean will open the editor screen. We will create a few simple steps using the following instructions (feel free to veer of course and try all of the options available):
+
+1. Click on the **+** icon next to the pipeline's **Start** node
+2. Click into **Name your stage** and enter a name
+3. Click on **+ Add step**
+4. Click on **Shell script**
+5. Type ```mvn -v``` into the text box
+6. Click on **Save** to save the pipeline and execute it
+7. Enter a commit message into the **Save Pipeline** pop up and click **Save & Run**
+
+After your pipeline executes you can click on the **pencil** icon to continue editing your pipeline.
