@@ -62,6 +62,31 @@ For the user change made in the last line to take place you need to log out and 
 ## Install Docker Compose
 
 
+The following commands download version 1.6.1 of docker-compose (the latest when this project was last updated), set ownership on the executable, move it to the /usr/local/bin directory, and modify its execution permissions.
+
+```
+curl -L https://github.com/docker/compose/releases/download/1.6.1/docker-compose-`uname -s`-`uname -m` > docker-compose 
+sudo chown root docker-compose
+sudo mv docker-compose /usr/local/bin
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+## Install Git and Clone Cje-master-install Repository
+
+The easiest way copy the project files to the EC2 instance is to use Git to clone the files. Git isn't installed on the instance by default so you will need to install it using:
+
+```sudo yum install -y git```
+
+Once Git is installed you can clone this project using the following command from the ec2-user home directory (/home/ec2-user):
+
+```sudo git clone https://github.com/PipelineHandsOn/cje-master-install```
+
+This will clone the project files into:
+
+```/home/ec2-user/cje-master-install```
+
+
+## Build the CJE Master Docker Image
 
 
 
