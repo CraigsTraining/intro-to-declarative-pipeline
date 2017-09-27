@@ -116,4 +116,72 @@ Your Jenkins instance will be available on port ```8080``` unless you modify the
 
 # Configure the Master
 
+Once the master has started you will need to log in and configure it to make the master useful for the workshop. The configuration includes:
+
+  * Completing the installation (add the license key, install required plugins, change admin user password)
+  * Setting up the environment (create folders for each user participating in the workshop)
+  * Verifying that the master is configured correctly by running some of the examples prior to the start of the workshop
+
+## Configure the Master
+
+The first time you access the new master you will need the ```initialAdminPassword``` copied in the **Start the CJE Master** section above to log in. You will also need a valid license key to complete the configuration process.
+
+**Note**: For the purpose of this document we will assume you already have a license key.
+
+1. Log in!
+
+2. Select **Use a License Key**, copy and paste your license key into the **Enter you license key** form, select **I accept the evaluation or standard license**, and click on **Submit**.
+
+3. Click on the **Install Select Plugins** option in the **Customize Jenkins** form.
+
+4. When your plugins are installed select **Continue as Admin** and then **Start Using CloudBees Enterprise Jenkins**.
+
+**Important**: The first step you should perform once you are logged in is to change the Administrator password to something secure that you won't forget!
+
+
+## Setup the Workshop Envrionment
+
+The following section covers the steps that should be taken to configure the master for the workshop.
+
+###Add Executors
+
+By default masters only have 2 executors. We need to add additional executors to support multiple students running concurrent jobs on the master.
+
+1. Click on the **Manage Jenkins** link
+2. Click on **Configure System**
+3. Update the value in the **# of executors** field to match the number chosen for your master (see instance guidance above)
+4. Click on **Save**
+
+###Update Plugins
+
+Depending on when the workshop is given the material in the workshop (and the plugins used) may be ahead of the versions of plugins in the CAP program. To update the master to the latest version of pipeline we are going to disable **Beekeeper** and update our instance to the latest plugins.
+
+1. Click on the **Manage Jenkins** link
+2. Click on **Beekeeper Upgrade Assistant**
+3. De-select **Enroll this instance in the CloudBees Assurance Program** and click **Save**
+4. Click on the **Manage Jenkins** link
+5. Click on the **Manage Plugins** link
+6. Scroll to the bottom of the **Updates** tab and click on the **All** option to select all of the plugins with available updates
+7. Click on **Download now and install after restart**
+8. When the updates are completed restart the master.
+
+Now install the Blue Ocean and Pipeline Utility Steps plugins and their dependencies.
+
+1. Click on the **Manage Jenkins** link
+2. Click on the **Manage Plugins** link
+3. Click on the **Available** tab
+4. Select the **Blue Ocean** and **Pipeline Utility Steps** plugins and click on **Download now and install after restart**
+5. Restart the master
+
+### Setup Shared Library
+
+
+### Add User Accounts
+
+
+### Verify the Master is Configured Properly
+
+
+
+
 
