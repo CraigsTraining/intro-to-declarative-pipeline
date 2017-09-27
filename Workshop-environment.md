@@ -139,11 +139,11 @@ The first time you access the new master you will need the ```initialAdminPasswo
 **Important**: The first step you should perform once you are logged in is to change the Administrator password to something secure that you won't forget!
 
 
-## Setup the Workshop Envrionment
+## Setup the Workshop Environment
 
 The following section covers the steps that should be taken to configure the master for the workshop.
 
-###Add Executors
+### Add Executors
 
 By default masters only have 2 executors. We need to add additional executors to support multiple students running concurrent jobs on the master.
 
@@ -152,7 +152,7 @@ By default masters only have 2 executors. We need to add additional executors to
 3. Update the value in the **# of executors** field to match the number chosen for your master (see instance guidance above)
 4. Click on **Save**
 
-###Update Plugins
+### Update Plugins
 
 Depending on when the workshop is given the material in the workshop (and the plugins used) may be ahead of the versions of plugins in the CAP program. To update the master to the latest version of pipeline we are going to disable **Beekeeper** and update our instance to the latest plugins.
 
