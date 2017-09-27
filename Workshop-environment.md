@@ -107,9 +107,9 @@ To start Jenkins use the following command from within the ```cje-master-install
 
 ```docker-compose up -d```
 
-Note: If the is the first time you are running Jenkins you will need to get the instance's initial administrative password from secrets. Your JENKINS_HOME directory will be ```/home/ec2-user/Jenkins``` and you can use the following command to output the password:
+Note: If the is the first time you are running Jenkins you will need to get the instance's initial administrative password from secrets. Your JENKINS_HOME directory will be ```/home/ec2-user/jenkins``` and you can use the following command to output the password:
 
-```sudo cat ~/Jenkins/secrets/initialAdminPassword```
+```sudo cat ~/jenkins/secrets/initialAdminPassword```
 
 Your Jenkins instance will be available on port ```8080``` unless you modify the projects ```docker-compose.yml``` file.
 
