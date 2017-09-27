@@ -88,7 +88,20 @@ This will clone the project files into:
 
 ## Build the CJE Master Docker Image
 
+Before you run Jenkins for the first time you need to build the Docker image it will user. The first step navigate to the project folder using:
 
+```cd cje-master-install```
+
+Then run the following Docker commands:
+
+```
+docker pull cloudbees/jenkins-enterprise
+docker-compose build
+```
+
+Once the build process completes you are ready to start your Jenkins instance using:
+
+```docker-compose up -d```
 
 
 # Configure the Master
