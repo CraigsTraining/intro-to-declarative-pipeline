@@ -4,7 +4,7 @@ This document describes how to create a shared CloudBees Jenkins Enterprise Mast
 
 **Note**: You will need an AWS account and knowledge of how to create EC2 instances (https://aws.amazon.com/documentation/ec2/).
 
-## Recommended AWS Instance Types
+## Recommended EC2 Instance Types
 
 The following is a rough guildeline to the AWS instance types that work well for for the workshop based on the number of users participating (giving each participant at least one dedicated executor as participants will frequently be building jobs at the same time):
 
@@ -16,4 +16,56 @@ The following is a rough guildeline to the AWS instance types that work well for
 **Notes**:
   - Recommendation based on creating 2 executors per vCPU
   - Additional validation needs to be performed
+
+# Create the AWS Instance
+
+The following instructions can be used to create a new EC2 instance to host the CJE Master for the workshop:
+
+1. Navigate to the EC2 console (https://console.aws.amazon.com/ec2/) and login;
+2. Click on **Instances** in the **Instances** Menu;
+3. Click on **Launch Instance**;
+4. Click **Select** for **Amazon Linux AMI 2017.03.1 (HVM), SSD Volume Type**;
+5. Select the proper **Instance Type** for your workshop requirements (see **Recommended EC2 Instace Types** above);
+6. Click **Review and Launch**;
+7. Click **Edit Security Groups**;
+8. Modify your **Security Group** settings to ensure that the required Jenkins ports are open for SSH and HTTP;
+9. Click **Review and Launch**;
+10. Make sure the settings are correct and then click on **Launch**.
+11. Select the key pair that you will use to connect to the instance and complete the creation process.
+
+Once your instance is up and running you will need to connect to it via SSH to complete the installation process (http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html).
+
+# Install the CloudBees Jenkins Enterprise Master
+
+Prior to installing the CJE Master on your EC2 instance you need to update the instance and install Docker and Git.
+
+## Update the Instance
+
+First update the instance using:
+
+```sudo yum update -y```
+
+## Install Docker
+
+Install docker using the following commands:
+
+```
+sudo yum install -y docker
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+```
+
+For the user change made in the last line to take place you need to log out and back in to the instance:
+
+```logout```
+
+## Install Docker Compose
+
+
+
+
+
+
+# Configure the Master
+
 
