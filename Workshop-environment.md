@@ -175,6 +175,25 @@ Now install the Blue Ocean and Pipeline Utility Steps plugins and their dependen
 
 ### Setup Shared Library
 
+In exercise 1.7 of the workshop participants will use a function contained within a Global Pipeline Library. Prior to running that exercise you need to add the library to the Jenkins Master using the following steps:
+
+1. Click on the **Manage Jenkins** link
+2. Click on **Configure System**
+3. Scroll down to **Global Pipeline Libraries** and click on **Add**
+4. Enter the following in the form fields:
+   - Name: ```SharedLibs```
+   - Default version: ```master```
+5. Select **Modern SCM**
+6. Select **Github**
+7. For **Credentials** select **Add** and fill out a new **Username with password:
+	- Username: ```PipelineHandsOn```
+	- Password: Your Github token
+	- ID: PipelineHandsOn-ID
+	- Description: can be left blank
+8. Select your newly added Credential from the dropdown list
+9. Enter **PipelineHandsOn** in the **Owner** text box
+10. Select **shared-libraries** from the **Repository** drop down
+11. Click on **Save**
 
 ### Add User Accounts
 
