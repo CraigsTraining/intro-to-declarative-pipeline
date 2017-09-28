@@ -10,6 +10,7 @@ The following is a rough guildeline to the AWS instance types that work well for
 
 | Users | Executors | Instance Type   | vCPU     | Memory     |  Cost Per Hour |  Cost Per Day |
 |-------|-----------|-----------------|----------|------------|----------------|---------------|
+| <= 4  | 4         | **t2.large**	  | 2	     | 8	      | $0.094         | $2.256        |
 | <= 9  | 8         | **t2.xlarge**	  | 4	     | 16	      | $0.188         | $4.512        |
 | <- 16 | 16        | **t2.2xlarge**  | 8	     | 32	      | $0.376         | $8.648        |
 
@@ -197,10 +198,31 @@ In exercise 1.7 of the workshop participants will use a function contained withi
 
 ### Add User Accounts
 
+If possible you should get a list of attendees in advance of the workshop and create login accounts for each to minimize the time required to setup the environment once the workshop starts. To keep things easy use the participants' first names as their user name and password.
+
+### Send a Pre-Worshop Email to Participants
+
+Prior to the workshop you should send out an email to participants to let them know what they will need to fully participate in the workshop. Below is a sample of the content you should send:
+
+```
+Dear Intro to Declarative Pipeline Workshop Participant:
+
+In order to follow along with the hands on portion of the workshop students should have the following resources available to them:
+
+  * Internet access
+  * An account on Github.com and a basic understanding of how to use Github and Git to do things like fork a repository, edit files in the web UI, and create pull requests
+  * A personal access token for your Github account (https://github.com/CraigsTraining/intro-to-declarative-pipeline/blob/master/Github-Personal-Access-Token.md) with the following permissions:
+    - repo: all
+    - admin:repo_hook: all
+    - admin:org_hook
+    - user: all
+  * Access to the CloudBees Jenkins Enterprise Master hosted on AWS used for the workship (link to be provided the day of the workshop)
+
+Thanks and I look forward to meeting working with everyone soon!
+
+[Your name here obviously]
+```
 
 ### Verify the Master is Configured Properly
 
-
-
-
-
+It is always a good idea to test the master prior to the workshop to avoid any surprises. The best way to do that is to run through some of the exercises and verify the participant user accounts.
