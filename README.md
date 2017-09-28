@@ -11,13 +11,13 @@ This is repository contains the instructions and learning materials associated w
   * How do you  create a pipeline using Blue Ocean's pipeline editor?
   * What Pipeline features are available only to CloudBees Enterprise Jenkins customers?
   
-A PDF version of the presentation that accompanies this workshop can be found here: https://github.com/PipelineHandsOn/intro-to-declarative-pipeline/blob/master/Introduction%20to%20Declarative%20Pipeline%20-%20Hands%20On.pdf
+A PDF version of the presentation that accompanies this workshop can be found here: [Introduction%20to%20Declarative%20Pipeline%20-%20Hands%20On.pdf](Introduction%20to%20Declarative%20Pipeline%20-%20Hands%20On.pdf)
 
 The exercises covered in the workshop are available at the following links:
 
-  * Exercises 1.X: https://github.com/PipelineHandsOn/intro-to-declarative-pipeline/blob/master/Exercise-01.md
-  * Exercises 2.X: https://github.com/PipelineHandsOn/intro-to-declarative-pipeline/blob/master/Exercise-02.md
-  * Exercises 3.X: https://github.com/PipelineHandsOn/intro-to-declarative-pipeline/blob/master/Exercise-03.md
+  * Exercises 1.X: [Exercise-01.md](Exercise-01.md)
+  * Exercises 2.X: [Exercise-02.md](Exercise-02.md)
+  * Exercises 3.X: [Exercise-03.md](Exercise-03.md)
 
 # Training Prerequisites
 
@@ -25,7 +25,7 @@ In order to follow along with the hands on portion of the workshop students shou
 
   * Internet access
   * An account on Github.com and a basic understanding of how to use Github and Git to do things like fork a repository, edit files in the web UI, and create pull requests
-  * A personal access token for your Github account (https://github.com/CraigsTraining/intro-to-declarative-pipeline/blob/master/Github-Personal-Access-Token.md) with the following permissions:
+  * A personal access token for your Github account ([Github-Personal-Access-Token.md](Github-Personal-Access-Token.md)) with the following permissions:
     - repo: all
     - admin:repo_hook: all
     - admin:org_hook
