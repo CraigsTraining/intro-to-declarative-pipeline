@@ -34,7 +34,7 @@ In order to follow along with the hands on portion of the workshop students shou
 
 # Workshop Environment
 
-For instructions on setting up a Jenkins environment (Jenkins, CloudBees Jenkins Team, or CloudBees Jenkins Enterprise) on AWS for the workshop see the following documentation: Workshop-environment.md
+For instructions on setting up a CloudBees Jenkins Enterprise environment on AWS for the workshop see the following documentation: [Workshop-environment.md](Workshop-environment.md)
 
 # Revision History
 
