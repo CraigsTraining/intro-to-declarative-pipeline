@@ -4,25 +4,25 @@ In this exercise we are going to quickly create a new pipeline to demonstrate ho
 
 ```
 pipeline {
-	agent any
-	stages {
-	    stage('One') {
-	        steps {
-	            echo 'Stage One - Step 1'
-	        }
-	    }
-	    stage('Checkpoint') {
-	        agent none
-	        steps {
-                checkpoint 'Checkpoint'
-            }
-	    }
-	    stage('Two') {
-	        steps {
-	            echo 'Stage Two - Step 1'
-	        }
-	    }
-	}
+   agent any
+   stages {
+      stage('One') {
+         steps {
+            echo 'Stage One - Step 1'
+         }
+      }
+      stage('Checkpoint') {
+         agent none
+         steps {
+            checkpoint 'Checkpoint'
+         }
+      }
+      stage('Two') {
+         steps {
+            echo 'Stage Two - Step 1'
+         }
+      }
+   }
 }
 ```
 
