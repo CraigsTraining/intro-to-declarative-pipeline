@@ -57,4 +57,4 @@ Once those repositories are forked:
 9. In **Script path** enter: ```Jenkins-pom```
 10. Click on **Scan Organization Now**
 
-When the scan is complete your **Github Organization** project should now have both the **sample-rest-server** project and the **mave-project**.
+When the scan is complete your **Github Organization** project should now have both the **sample-rest-server** project and the **maven-project**.
