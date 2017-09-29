@@ -155,9 +155,9 @@ In this exercise we are going to add a fourth stage to our or pipeline that runs
 
 
 ```
-		stage('Testing') {
+         stage('Testing') {
             parallel {
-                stage('Java 7') {
+               stage('Java 7') {
                     agent { docker 'openjdk:7-jdk-alpine' }
                     steps {
                         sh 'java -version'
