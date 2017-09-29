@@ -55,6 +55,7 @@ Once those repositories are forked:
 7. In **Repository URL** enter: ```https://github.com/PipelineHandsOn/custom-marker-files```
 8. Select your credentials from the **Credentials** menu
 9. In **Script path** enter: ```Jenkins-pom```
-10. Click on **Scan Organization Now**
+10. Click on **Save**
+11. Click on **Scan Organization Now**
 
 When the scan is complete your **Github Organization** project should now have both the **sample-rest-server** project and the **maven-project**.
