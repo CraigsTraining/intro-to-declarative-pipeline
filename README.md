@@ -24,7 +24,7 @@ The exercises covered in the workshop are available at the following links:
 In order to follow along with the hands on portion of the workshop students should have the following resources available to them:
 
   * Internet access
-  * An account on Github.com and a basic understanding of how to use Github and Git to do things like fork a repository, edit files in the web UI, and create pull requests
+  * An account on Github.com and a basic understanding of how to use Github to do things like fork a repository, edit files in the web UI, and create pull requests
   * A personal access token for your Github account ([Github-Personal-Access-Token.md](Github-Personal-Access-Token.md)) with the following permissions:
     - repo: all
     - admin:repo_hook: all
