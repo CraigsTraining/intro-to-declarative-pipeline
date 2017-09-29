@@ -4,9 +4,10 @@ In this exercise we are going to quickly create a new pipeline to demonstrate ho
 
 ```
 pipeline {
-   agent any
+   agent none
    stages {
       stage('One') {
+         agent any
          steps {
             echo 'Stage One - Step 1'
          }
@@ -18,6 +19,7 @@ pipeline {
          }
       }
       stage('Two') {
+         agent any
          steps {
             echo 'Stage Two - Step 1'
          }
