@@ -166,12 +166,15 @@ The ```helloWorld``` function we are calling can be seen at: https://github.com/
 
 In this exercise we are going to add a fourth stage to our or pipeline that runs two steps in parallel on two different docker based agents (one running Java 7 and one running Java 8). The following code also includes ```sleep``` steps to demonstrate what happens when parallel steps complete execution at different times:
 
+**Important Note** The following code demonstrates a new set of features added in Pipeline 1.2 (parallel stages) and 1.2.1 (failFast inside of a parallel stage).
+
 
 ```
          stage('Testing') {
             parallel {
                stage('Java 7') {
                     agent { docker 'openjdk:7-jdk-alpine' }
+                    failFast true
                     steps {
                         sh 'java -version'
                         sleep time: 1, unit: 'MINUTES'
