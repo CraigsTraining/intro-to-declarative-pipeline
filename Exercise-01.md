@@ -188,7 +188,7 @@ In this exercise we are going to add a fourth stage to our or pipeline that runs
         }
 ```
 
-**Note**: If your build breaks double check your pipeline script to make sure that the agent at the top of of the pipeline was reverted back to ```agent any``` as described in exercise 1.3.
+**Note**: If your build breaks double check your pipeline script to make sure that the agent at the top of of the pipeline was reverted back to ```agent any``` as described in exercise 1.2.
 
 # Exercise 1.9
 
