@@ -2,15 +2,18 @@
 
 In **Exercise 1.1** we will create a simple declarative pipeline directly within the Jenkins interface.
 
-To create the new pipeline:
+First create a personal folder in Jenkins to hold the pipelines you create in this workshop:
 
 1. Log into Jenkins
 2. Click on **New Item**
 3. Type you name into the **Enter an item name** text box, click on **Folder**, and then click on the **OK** button.
 4. Click on **Save** in the folder configuration screen to accept the default options.
-5. Click on the **create new jobs** link.
-6. Type **SimplePipeline** into the **Enter an item name** text box, click on **Pipeline**, and then click on the **OK** button.
-7. Copy and paste the following code into the **Pipeline Script** text box:
+
+Now create a new pipeline inside of your personal folder:
+
+1. Click on the **create new jobs** link.
+2. Type **SimplePipeline** into the **Enter an item name** (example: MyFirstPipeline) text box, click on **Pipeline**, and then click on the **OK** button.
+3. Copy and paste the following code into the **Pipeline Script** text box:
 
 ```
 pipeline {
@@ -25,7 +28,8 @@ pipeline {
    }
 }
 ```
-Click on **Save** and then click on **Build Now** to run your pipeline.
+
+4. Click on **Save** and then click on **Build Now** to run your pipeline.
 
 # Exercise 1.2
 
@@ -39,6 +43,15 @@ In **Exercise 1.2** we will update the pipeline we created in 1.1 to execute in 
    }
 ```
 
+2. Execute your job by clicking on **Build Now** and check the Console Log to see how Jenkins pulls the appropriate docker image and runs your build insde the container created from that image.
+
+Before going on to the next exercise let's revert our pipeline to using:
+
+```
+   agent any
+```
+
+
 # Exercise 1.3
 
 For **Exercise 1.3** we are going to update our **SimplePipeline** job to demonstrate how to use environmental variables.
@@ -51,7 +64,7 @@ At the top of the pipeline insert the following code between the ```agent``` and
    }
 ```
 
-Then update the ```echo 'Hello World!'``` line to read ```echo "Hello ${MY_NAME}!" and run your build again to view the results.
+Then update the ```echo 'Hello World!'``` line to read ```echo "Hello ${MY_NAME}!"``` and run your build again to view the results.
 
 We can also use environmental variables to import credentials. To demonstrate we will add the following line to our ```environment``` block:
 
@@ -86,7 +99,7 @@ Then update the ```echo "Hello ${MY_NAME}!'``` line to read ```echo "Hello ${par
 
 For **Exercise 1.5** we are going to add a new stage after the **Say Hello** stage that will demonstrate how to ask interactively for user input.
 
-Insert the following ``stage``` block into your pipeline:
+Insert the following ```stage``` block into your pipeline:
 
 ```
       stage('Deploy') {
@@ -174,6 +187,8 @@ In this exercise we are going to add a fourth stage to our or pipeline that runs
             }
         }
 ```
+
+**Note**: If your build breaks double check your pipeline script to make sure that the agent at the top of of the pipeline was reverted back to ```agent any``` as described in exercise 1.3.
 
 # Exercise 1.9
 
