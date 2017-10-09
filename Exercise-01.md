@@ -140,9 +140,11 @@ In this example we will add a Post Action to our **Deploy** stage to handle a ti
 
 On the next build wait for the input time and you will see the following line in your console output: ```Why didn't you push my button?```.
 
+**Note**: After you have executed this pipeline several times you might want to remove the ```Deploy``` stage from your pipeline so that will not have to manually approve it each time it runs.
+
 # Exercise 1.7
 
-In **Exercise 1.7** we are going to add a third stage to our pipeline that uses a **Shared Library** to import functionality that allows us to say hi.
+In **Exercise 1.7** we are going to add a stage to our pipeline that uses a **Shared Library** to import functionality that allows us to say hi.
 
 More information on using Shared Libraries is available here: https://jenkins.io/doc/book/pipeline/shared-libraries/
 
@@ -164,7 +166,7 @@ The ```helloWorld``` function we are calling can be seen at: https://github.com/
 
 # Exercise 1.8
 
-In this exercise we are going to add a fourth stage to our or pipeline that runs two steps in parallel on two different docker based agents (one running Java 7 and one running Java 8). The following code also includes ```sleep``` steps to demonstrate what happens when parallel steps complete execution at different times:
+In this exercise we are going to add another stage to our pipeline that runs two steps in parallel on two different docker based agents (one running Java 7 and one running Java 8). The following code also includes ```sleep``` steps to demonstrate what happens when parallel steps complete execution at different times:
 
 **Important Note** The following code demonstrates a new set of features added in Pipeline 1.2 (parallel stages) and 1.2.1 (failFast inside of a parallel stage).
 
