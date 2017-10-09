@@ -196,6 +196,15 @@ In exercise 1.7 of the workshop participants will use a function contained withi
 10. Select **shared-libraries** from the **Repository** drop down
 11. Click on **Save**
 
+### Add test-user Credential
+
+In exercise 1.3 participants will use the ```test-user``` credential in a pipeline so it needs to be added in advance. To add the credential:
+
+1. From the Jenkins Master home page click on **Credentials**, then click on **System**, then **Global credentials (unrestricted)**.
+2. Click on **Add Credentials**
+3. In the **Add Credentials** form select **Username with password**, enter ```test-user``` for **Username**, **Password**, and the **ID** field.
+4. Click on **OK** to save the new credential.
+
 ### Add User Accounts
 
 If possible you should get a list of attendees in advance of the workshop and create login accounts for each to minimize the time required to setup the environment once the workshop starts. To keep things easy use the participants' first names as their user name and password.

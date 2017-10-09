@@ -19,6 +19,8 @@ The exercises covered in the workshop are available at the following links:
   * Exercises 2.X: [Exercise-02.md](Exercise-02.md)
   * Exercises 3.X: [Exercise-03.md](Exercise-03.md)
 
+ **Important Note**: The training content contained in this workshop are kept up to date with the latest releases of pipeline plugins and not all features will be available in Jenkins environments that are not updated regulary or within CAP (the CloudBees Assurance Program).
+
 # Training Prerequisites
 
 In order to follow along with the hands on portion of the workshop students should have the following resources available to them:
@@ -38,7 +40,7 @@ For instructions on setting up a CloudBees Jenkins Enterprise environment on AWS
 
 # Revision History
 
- * **[1.1](https://github.com/PipelineHandsOn/intro-to-declarative-pipeline/releases/tag/1.1)** - Initial release of workshop materials.
+ See: [Releases](https://github.com/PipelineHandsOn/intro-to-declarative-pipeline/releases)
 
 # License
 
