@@ -19,7 +19,7 @@ The exercises covered in the workshop are available at the following links:
   * Exercises 2.X: [Exercise-02.md](Exercise-02.md)
   * Exercises 3.X: [Exercise-03.md](Exercise-03.md)
 
- **Important Note**: The training content contained in this workshop are kept up to date with the latest releases of pipeline plugins and not all features will be available in Jenkins environments that are not updated regulary or within CAP (the CloudBees Assurance Program).
+ **Important Note**: The training content contained in this workshop is kept up to date with the latest releases of pipeline plugins and not all features will be available in Jenkins environments that are not updated regulary or within CAP (the CloudBees Assurance Program).
 
 # Training Prerequisites
 
